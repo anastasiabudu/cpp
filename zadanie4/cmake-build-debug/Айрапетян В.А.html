@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розрахунок ціни товару</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            margin-top: 5px;
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Розрахунок ціни товару</h1>
+        <form id="priceForm">
+            <label for="purchasePrice">Купівельна ціна (грн):</label>
+            <input type="number" id="purchasePrice" step="0.01" required>
+
+            <label for="quantity">Кількість товару:</label>
+            <input type="number" id="quantity" step="1" required>
+
+            <label for="category">Товарна група:</label>
+            <select id="category" required>
+                <option value="">Оберіть товарну групу</option>
+                <option value="clothing">Одяг</option>
+                <option value="footwear">Взуття</option>
+                <option value="others">Інші товари</option>
+            </select>
+
+            <button type="button" onclick="calculate()">Розрахувати</button>
+        </form>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculate() {
+            // Отримання введених значень
+            var purchasePrice = parseFloat(document.getElementById('purchasePrice').value);
+            var quantity = parseInt(document.getElementById('quantity').value);
+            var category = document.getElementById('category').value;
+
+            // Перевірка наявності всіх необхідних значень
+            if (isNaN(purchasePrice) || isNaN(quantity) || !category) {
+                alert("Будь ласка, заповніть всі поля коректно.");
+                return;
+            }
+
+            // Визначення націнки в залежності від товарної групи
+            var markup;
+            switch (category) {
+                case 'clothing':
+                    markup = 0.20; // 20% націнка
+                    break;
+                case 'footwear':
+                    markup = 0.25; // 25% націнка
+                    break;
+                case 'others':
+                    markup = 0.15; // 15% націнка
+                    break;
+                default:
+                    markup = 0;
+            }
+
+            // Розрахунок ціни продажу та суми реалізації
+            var sellingPrice = purchasePrice * (1 + markup);
+            var totalRevenue = sellingPrice * quantity;
+
+            // Виведення результатів на сторінку
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <h2>Результати розрахунку</h2>
+                <p><strong>Ціна продажу одного товару:</strong> ${sellingPrice.toFixed(2)} грн</p>
+                <p><strong>Сума реалізації:</strong> ${totalRevenue.toFixed(2)} грн</p>
+            `;
+        }
+    </script>
+</body>
+</html>

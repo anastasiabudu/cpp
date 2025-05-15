@@ -1,0 +1,3 @@
+C:/Users/Acer/CLionProjects/ZADANIE4/cmake-build-debug/CMakeFiles/ZADANIE4.dir
+C:/Users/Acer/CLionProjects/ZADANIE4/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Acer/CLionProjects/ZADANIE4/cmake-build-debug/CMakeFiles/rebuild_cache.dir

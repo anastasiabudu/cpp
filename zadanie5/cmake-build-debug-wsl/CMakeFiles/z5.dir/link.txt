@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -Wextra -lm -fsanitize=address -fno-omit-frame-pointer -g -g CMakeFiles/z5.dir/main.c.o CMakeFiles/z5.dir/monopoly.c.o CMakeFiles/z5.dir/z5.c.o -o z5 

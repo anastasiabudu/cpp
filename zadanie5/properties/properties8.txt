@@ -1,0 +1,16 @@
+[Yellow]
+"GYM":2
+[Brown]
+"MILL":3
+[Green]
+"GALLERY":4
+[Purple]
+"MARKETPLACE":1
+[Blue]
+"SWIMMING POOL":1
+[Skyblue]
+"CASTLE":8
+[Red]
+"ZOO":5
+[Orange]
+"MUSEUM":1

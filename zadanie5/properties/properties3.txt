@@ -1,0 +1,4 @@
+[Red]
+"MOUNTAIN PARK":1
+"GAS STATION":2
+"BANK":3

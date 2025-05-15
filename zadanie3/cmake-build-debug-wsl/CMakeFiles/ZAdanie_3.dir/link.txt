@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/ZAdanie_3.dir/main.c.o CMakeFiles/ZAdanie_3.dir/z3.c.o -o ZAdanie_3 

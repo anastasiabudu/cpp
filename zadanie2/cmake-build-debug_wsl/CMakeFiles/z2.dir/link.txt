@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/z2.dir/main.c.o CMakeFiles/z2.dir/z2.c.o CMakeFiles/z2.dir/data.c.o CMakeFiles/z2.dir/functions.c.o -o z2  -lm 

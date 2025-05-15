@@ -1,0 +1,3 @@
+/mnt/c/Users/Acer/CLionProjects/z5/cmake-build-default-wsl/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Acer/CLionProjects/z5/cmake-build-default-wsl/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Acer/CLionProjects/z5/cmake-build-default-wsl/CMakeFiles/z5.dir
